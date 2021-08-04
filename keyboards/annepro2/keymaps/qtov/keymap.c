@@ -91,7 +91,7 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_HOME, KC_END, KC_TRNS, KC_PGUP, KC_TRNS, KC_TRNS,  KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_PGDN, KC_TRNS,         KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,             KC_TRNS,  MO(_FN1_LAYER),  MO(_FN2_LAYER), TO(_BASE_LAYER)
+    KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,             KC_TRNS,  MO(_FN1_LAYER),  MO(_FN2_LAYER), TO(0)
   ),
   /* Layer _FN1_LAYER
   * ,-----------------------------------------------------------------------------------------.

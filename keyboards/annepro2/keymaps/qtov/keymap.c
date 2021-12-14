@@ -5,10 +5,15 @@
 enum anne_pro_layers {
   _BASE_LAYER,
   _ARR_LAYER,
+<<<<<<< HEAD
+=======
+  _ARR_LAYER2,
+>>>>>>> final stage of this, changed keebs
   _FN1_LAYER,
   _FN2_LAYER,
 };
 
+<<<<<<< HEAD
 typedef struct {
     bool is_press_action;
     uint8_t state;
@@ -34,6 +39,8 @@ uint8_t cur_dance(qk_tap_dance_state_t *state);
 void alt_finished(qk_tap_dance_state_t *state, void *user_data);
 void alt_reset(qk_tap_dance_state_t *state, void *user_data);
 
+=======
+>>>>>>> final stage of this, changed keebs
 // This is ROW*MATRIX_COLS + COL
 #define CAPS_LOCATION (MATRIX_COLS * 2 + 0)
 
@@ -62,7 +69,11 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |-----------------------------------------------------------------------------------------+
   * | Shift      |  z  |  x  |  c  |  v  |  b  |  n  |  m  |  ,  |  .  |  /  |    Shift       |
   * |-----------------------------------------------------------------------------------------+
+<<<<<<< HEAD
   * | Ctrl  |  L1   |  OSL  |               space             |  R1   |  FN1  |  FN2  | Ctrl  |
+=======
+  * | Ctrl  |  L1   |  Alt  |               space             |  R1   |  FN1  |  FN2  | Ctrl  |
+>>>>>>> final stage of this, changed keebs
   * \-----------------------------------------------------------------------------------------/
   */
   [_BASE_LAYER] = KEYMAP(
@@ -70,7 +81,11 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC,  KC_BSLS,
     LT(_FN1_LAYER, KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT,         KC_ENT,
     KC_LSFT,KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+<<<<<<< HEAD
     KC_LCTL,KC_LGUI, TD(ALT_OSL1),      KC_SPC,             KC_RGUI, MO(_FN1_LAYER), MO(_FN2_LAYER), KC_RCTL
+=======
+    KC_LCTL,KC_LGUI, KC_LALT,      KC_SPC,             KC_RGUI, MO(_FN1_LAYER), MO(_FN2_LAYER), KC_RCTL
+>>>>>>> final stage of this, changed keebs
   ),
   /*
   * Layer _ARR_LAYER
@@ -93,6 +108,30 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,             KC_TRNS,  MO(_FN1_LAYER),  MO(_FN2_LAYER), TO(0)
   ),
+<<<<<<< HEAD
+=======
+  /*
+  * Layer _ARR_LAYER2
+  * ,-----------------------------------------------------------------------------------------.
+  * |     |     |     |     |     |     |     |     |     |     |     |     |     |           |
+  * |-----------------------------------------------------------------------------------------+
+  * |        |     |     |     |     |     |     |     |  ^  |     |     |     |     |        |
+  * |-----------------------------------------------------------------------------------------+
+  * |         |     |     |     |     |     |     |  <  |  v  |  >  |     |     |             |
+  * |-----------------------------------------------------------------------------------------+
+  * |            |     |     |     |     |     |     |     |     |     |     |                |
+  * |-----------------------------------------------------------------------------------------+
+  * |       |       |       |                                 |       |  FN1  |  FN2  | BASE  |
+  * \-----------------------------------------------------------------------------------------/
+  */
+  [_ARR_LAYER2] = KEYMAP(
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS, KC_TRNS,         KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,             KC_TRNS,  MO(_FN1_LAYER),  MO(_FN2_LAYER), TO(0)
+  ),
+>>>>>>> final stage of this, changed keebs
   /* Layer _FN1_LAYER
   * ,-----------------------------------------------------------------------------------------.
   * | ESC | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |           |
@@ -123,7 +162,11 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   * |-----------------------------------------------------------------------------------------+
   * |            |     |     |     |     |     |     |     |     |     |     |                |
   * |-----------------------------------------------------------------------------------------+
+<<<<<<< HEAD
   * |       |       |       |                                 |       |       |       | ARR_L |
+=======
+  * |       |       |       |                                 | ARR_L2|       |       | ARR_L |
+>>>>>>> final stage of this, changed keebs
   * \-----------------------------------------------------------------------------------------/
   */
   [_FN2_LAYER] = KEYMAP(
@@ -131,7 +174,11 @@ const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_AP2_BT_UNPAIR, KC_AP2_BT1, KC_AP2_BT2, KC_AP2_BT3, KC_AP2_BT4, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT,  KC_MPLY,
     KC_CAPS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+<<<<<<< HEAD
     KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,             KC_TRNS,  KC_TRNS,  KC_TRNS, TG(_ARR_LAYER)
+=======
+    KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS,             TG(_ARR_LAYER2),  KC_TRNS,  KC_TRNS, TG(_ARR_LAYER)
+>>>>>>> final stage of this, changed keebs
   ),
 };
 
@@ -148,14 +195,35 @@ bool led_update_user(led_t led_state) {
     static uint8_t caps_state = 0;
     if (caps_state != led_state.caps_lock) {
         if (led_state.caps_lock) {
+<<<<<<< HEAD
             annepro2LedSetMask(CAPS_LOCATION);
         } else {
             annepro2LedClearMask(CAPS_LOCATION);
+=======
+            const annepro2Led_t color = {
+                .p.red = 0xff,
+                .p.green = 0x00,
+                .p.blue = 0x00,
+                .p.alpha = 0xff
+            };
+
+            annepro2LedMaskSetKey(2, 0, color);
+        } else {
+            const annepro2Led_t color = {
+                .p.red = 0xff,
+                .p.green = 0x00,
+                .p.blue = 0x00,
+                .p.alpha = 0x00
+            };
+
+            annepro2LedMaskSetKey(2, 0, color);
+>>>>>>> final stage of this, changed keebs
         }
         caps_state = led_state.caps_lock;
     }
     return true;
 }
+<<<<<<< HEAD
 
 uint8_t cur_dance(qk_tap_dance_state_t *state) {
     switch (state->count) {
@@ -228,3 +296,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+=======
+>>>>>>> final stage of this, changed keebs
